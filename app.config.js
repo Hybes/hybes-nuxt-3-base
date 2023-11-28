@@ -4,6 +4,9 @@ export default defineAppConfig({
         gray: 'zinc',
         container: {
             constrained: 'max-w-5xl'
+        },
+        icons: {
+            dynamic: true
         }
     },
 });
