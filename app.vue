@@ -5,26 +5,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  setup() {
-    return {
-      config: useRuntimeConfig(),
-    };
-  },
-  methods: {
-    navigateTo(id) {
-      const element = document.querySelector(id);
-      element.scrollIntoView({ behavior: 'smooth' });
-    },
-    toggleDrawer() {
-      this.drawer = !this.drawer;
-    },
-    closeDrawer() {
-      this.drawer = false;
-    },
-  },
-}
+<script setup>
+const config = useRuntimeConfig();
 </script>
 
 <style>

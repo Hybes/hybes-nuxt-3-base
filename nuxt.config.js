@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  colorMode: {
+    preference: 'light'
+  },
   app: {
     head: {
       title: "Ben's Site",
@@ -75,10 +78,11 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxtjs/robots',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/plausible',
     '@nuxt/image',
     '@nuxt/content',
+    '@nuxt/ui',
     'nuxt-icon'
+
   ],
   extends: [
     'nuxt-seo-kit'

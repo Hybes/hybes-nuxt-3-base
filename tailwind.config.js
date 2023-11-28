@@ -33,6 +33,7 @@ module.exports = {
         accent: '#bbed50',
       },
       screens: {
+        '2xl': '1600px',
         full: '2160px',
       },
     },
