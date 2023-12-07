@@ -6,6 +6,7 @@
 			Learn more about Nuxt Routing
 			<UIcon name="line-md:arrow-right-circle" class="w-5 h-5" dynamic />
 		</UButton>
+		<ExampleComponent />
 	</div>
 </template>
 

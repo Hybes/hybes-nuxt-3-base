@@ -1,11 +1,20 @@
 <template>
-	<SeoKit />
 	<div>
+		<NuxtPwaManifest />
 		<NuxtPage />
 	</div>
 </template>
 
 <script setup>
+useSchemaOrg([
+	definePerson({
+		name: 'Ben Hybert'
+	}),
+	defineWebSite({
+		name: 'Ben Hybert Test Site'
+	}),
+	defineWebPage()
+])
 const config = useRuntimeConfig()
 </script>
 

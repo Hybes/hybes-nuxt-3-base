@@ -1,11 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	colorMode: {
-		preference: 'light'
+		preference: 'dark'
 	},
 	app: {
 		head: {
-			title: "Ben's Site",
 			htmlAttrs: {
 				lang: 'en-GB'
 			},
@@ -62,37 +61,60 @@ export default defineNuxtConfig({
 		pageTransition: { name: 'fade', mode: 'out-in' }
 	},
 	devtools: { enabled: true },
-	runtimeConfig: {
-		public: {
-			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://test.brth.uk',
-			siteName: "Ben's Site",
-			siteDescription: "Welcome to Ben's Site!",
-			language: 'en-GB'
-		}
+	site: {
+		name: "Ben's Site",
+		description: 'DESCRIPTION HERE',
+		url: 'https://test.brth.uk',
+		defaultLocale: 'en-GB'
 	},
-
 	modules: [
 		'@nuxtjs/device',
-		'@nuxtjs/robots',
 		'@nuxtjs/google-fonts',
+		'@nuxtjs/web-vitals',
 		'@nuxtjs/eslint-module',
+		'@nuxtjs/device',
+		'@nuxtjs/html-validator',
+		'@nuxtjs/fontaine',
 		'@nuxt/image',
 		'@nuxt/content',
 		'@nuxt/ui',
-		'nuxt-icon'
+		'@vueuse/nuxt',
+		'@vite-pwa/nuxt',
+		'@nuxtseo/module',
+		'@morev/vue-transitions/nuxt',
+		'nuxt-simple-robots',
+		'nuxt-simple-sitemap',
+		'nuxt-schema-org',
+		'nuxt-icon',
+		'nuxt-lodash',
+		'nuxt-headlessui',
+		'nuxt-payload-analyzer',
+		'nuxt-aos',
+		'dayjs-nuxt'
 	],
-	extends: ['nuxt-seo-kit'],
-	robots: {
-		rules: {
-			UserAgent: '*',
-			Disallow: ''
-		}
-	},
+	extends: ['nuxt-umami'],
 	css: ['~/assets/css/main.css'],
+	tailwindcss: {
+		viewer: false
+	},
 	postcss: {
 		plugins: {
 			tailwindcss: {},
 			autoprefixer: {}
 		}
+	},
+	aos: {
+		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+		offset: 120, // offset (in px) from the original trigger point
+		delay: 0, // values from 0 to 3000, with step 50ms
+		duration: 400, // values from 0 to 3000, with step 50ms
+		easing: 'ease-in', // default easing for AOS animations
+		once: false, // whether animation should happen only once - while scrolling down
+		mirror: false, // whether elements should animate out while scrolling past them
+		anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
+	},
+	webVitals: {
+		provider: 'log',
+		debug: true
 	}
 })
