@@ -1,7 +1,10 @@
 <template>
 	<div>
 		<NuxtPwaManifest />
-		<NuxtPage />
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
+		<UNotifications />
 	</div>
 </template>
 
@@ -15,7 +18,13 @@ useSchemaOrg([
 	}),
 	defineWebPage()
 ])
+
 const config = useRuntimeConfig()
+const nuxtApp = useNuxtApp()
+
+nuxtApp.hook('page:finish', () => {
+	window.scrollTo(0, 0)
+})
 </script>
 
 <style>

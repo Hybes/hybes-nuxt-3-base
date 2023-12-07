@@ -56,6 +56,14 @@ export default defineNuxtConfig({
 			link: [
 				{ rel: 'icon', type: 'image', href: '/favicon.ico' }
 				// { rel: 'stylesheet', href: 'https://use.typekit.net/nyk3qjw.css' },
+			],
+			script: [
+				{
+					hid: 'umami-script',
+					src: 'https://view.cnnct.uk/script.js',
+					async: true,
+					'data-website-id': '3d897626-f5f5-43ba-89f7-53ef9e247d4b'
+				}
 			]
 		},
 		pageTransition: { name: 'fade', mode: 'out-in' }
@@ -70,7 +78,6 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/device',
 		'@nuxtjs/google-fonts',
-		'@nuxtjs/web-vitals',
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/device',
 		'@nuxtjs/html-validator',
@@ -89,10 +96,8 @@ export default defineNuxtConfig({
 		'nuxt-lodash',
 		'nuxt-headlessui',
 		'nuxt-payload-analyzer',
-		'nuxt-aos',
 		'dayjs-nuxt'
 	],
-	extends: ['nuxt-umami'],
 	css: ['~/assets/css/main.css'],
 	tailwindcss: {
 		viewer: false
@@ -102,19 +107,5 @@ export default defineNuxtConfig({
 			tailwindcss: {},
 			autoprefixer: {}
 		}
-	},
-	aos: {
-		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		offset: 120, // offset (in px) from the original trigger point
-		delay: 0, // values from 0 to 3000, with step 50ms
-		duration: 400, // values from 0 to 3000, with step 50ms
-		easing: 'ease-in', // default easing for AOS animations
-		once: false, // whether animation should happen only once - while scrolling down
-		mirror: false, // whether elements should animate out while scrolling past them
-		anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
-	},
-	webVitals: {
-		provider: 'log',
-		debug: true
 	}
 })
