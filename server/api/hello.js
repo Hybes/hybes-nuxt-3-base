@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
-  return {
-    body: {
-      message: 'Hello from the API!',
-    },
-  };
-});
+	return {
+		body: {
+			message: 'Hello from the API!'
+		}
+	}
+})
