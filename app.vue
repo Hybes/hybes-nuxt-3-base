@@ -1,8 +1,8 @@
 <template>
-  <SeoKit />
-  <div>
-    <NuxtPage />
-  </div>
+	<SeoKit />
+	<div>
+		<NuxtPage />
+	</div>
 </template>
 
 <script setup>
