@@ -9,17 +9,6 @@
 </template>
 
 <script setup>
-useSchemaOrg([
-	definePerson({
-		name: 'Ben Hybert'
-	}),
-	defineWebSite({
-		name: 'Ben Hybert Test Site'
-	}),
-	defineWebPage()
-])
-
-const config = useRuntimeConfig()
 const nuxtApp = useNuxtApp()
 
 nuxtApp.hook('page:finish', () => {

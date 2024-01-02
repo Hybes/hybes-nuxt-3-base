@@ -83,20 +83,13 @@ export default defineNuxtConfig({
 		'@nuxtjs/html-validator',
 		'@nuxtjs/fontaine',
 		'@nuxt/image',
-		'@nuxt/content',
 		'@nuxt/ui',
 		'@vueuse/nuxt',
-		'@vite-pwa/nuxt',
 		'@nuxtseo/module',
 		'@morev/vue-transitions/nuxt',
 		'nuxt-simple-robots',
 		'nuxt-simple-sitemap',
-		'nuxt-schema-org',
-		'nuxt-icon',
-		'nuxt-lodash',
-		'nuxt-headlessui',
-		'nuxt-payload-analyzer',
-		'dayjs-nuxt'
+		'nuxt-headlessui'
 	],
 	css: ['~/assets/css/main.css'],
 	tailwindcss: {
